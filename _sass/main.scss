@@ -1,0 +1,78 @@
+/* style.scss */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch; /* Ensure all cards have the same height */
+}
+
+.gallery-item {
+  width: calc(33.33% - 10px);
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  min-height: 400px; /* Set the minimum height for each card */
+  min-width: 300px; /* Set the minimum width for each card */
+  position: relative; /* To position the text */
+  background-position: center;
+  background-size: cover; /* Resize the background image to cover the entire card */
+
+
+}
+
+.gallery-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Resize the background image to cover the entire card */
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: none; /* Hide the image element */
+}
+
+.image-gradient{
+  // background:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(32,30,44,0.64) 88%,rgba(32,30,44,0.65) 89%);
+  background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(32, 30, 44, 0.64) 88%, rgba(32, 30, 44, 0.6) 89%);
+  z-index:3;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+}
+.card-content {
+  position: absolute;
+  bottom: 10px; /* Adjust the spacing from the bottom */
+  left: 10px;
+  color: #fff;
+  padding: 5px;
+  font-weight: normal; /* Make the font less bold */
+  text-align: center;
+  z-index: 7;
+}
+// .card-title {
+//   position: absolute;
+//   left: 10px;
+//   color: #fff;
+//   // background: rgba(0, 0, 0, 0.7);
+//   padding: 5px;
+//   margin: 0;
+//   font-weight: normal; /* Make the font less bold */
+//   text-align: center;
+//   width: calc(100% - 20px);
+//   z-index: 7;
+//   bottom: 10px;
+// }
+
+// .card-date {
+//   position: absolute;
+//   bottom: 10px; /* Adjust the spacing from the bottom */
+//   left: 10px;
+//   color: #FFD700; /* Slightly yellow color */
+//   margin: 0;
+//   font-weight: normal; /* Make the font less bold */
+//   text-align: center;
+// }
