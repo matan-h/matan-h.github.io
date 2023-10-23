@@ -5,6 +5,8 @@ date: '2021-11-05T10:11:11+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=147'
 permalink: /snippets-program/
+layout: single
+
 image: /assets/images/code-snippets.png
 categories:
     - dev-program

@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
+  gem 'jekyll-environment-variables'
 end
 
 gem "minimal-mistakes-jekyll", "~> 4.24"

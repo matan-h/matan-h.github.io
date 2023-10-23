@@ -1,9 +1,8 @@
 ---
-title: "Python Editor"
-excerpt: "Python editor."
-sitemap: true
+title: Python Editor
+excerpt: Python editor.
 permalink: /python-editor
-layout: single 
+description: run pyton online using only your browser
 ---
 <head>
   <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/editor/editor.main.min.css">

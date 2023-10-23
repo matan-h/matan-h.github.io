@@ -1,6 +1,7 @@
 ---
 id: 129
 title: 'Hebrew python'
+layout: single
 date: '2021-11-05T09:05:28+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=129'
