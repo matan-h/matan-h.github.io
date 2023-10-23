@@ -38,10 +38,8 @@ First, write the command `termux-setup-storage` – that will allow Termux to re
 
 Second, let’s install some utilities that I think every development environment should have (or at least these are the utilities I always use) :
 
-```
-<pre class="wp-block-code">```bash
+```bash
 pkg install git python micro zoxide fd sd ripgrep
-```
 ```
 
 Here is an explanation for each of the tools:
@@ -53,30 +51,26 @@ Here is an explanation for each of the tools:
 - [zoxide](https://github.com/ajeetdsouza/zoxide) – smarter cd command. It keeps track of the directories you use the most, so if you type `z  myproject`, it will remember that it is located in the `/sdcard/termux/projects/myproject`, for instance.
 - [fd](https://github.com/sharkdp/fd) – a simpler `find` command, that uses `fd regx` to find all files containing `regx`, and `fd -e html` to find all files with extension `html`
 - [sd](https://github.com/chmln/sd) – (far) better than `sed`. Find and replace regex just by `sd before after`, for example, to replace newlines with commas: `sd '\n' ','` ([here is how to do it with ](https://unix.stackexchange.com/a/114948/448375)`<a href="https://unix.stackexchange.com/a/114948/448375">sed</a>`)
-- [Ripgrep](https://github.com/BurntSushi/ripgrep) – [fast](https://github.com/BurntSushi/ripgrep#quick-examples-comparing-tools) search for regex in all files in a directory (for example, `rg javascript:` to find all files that has the string “javascript:” in them)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep) – [fast](https://github.com/BurntSushi/ripgrep#quick-examples-comparing-tools) search for regex in all files in a directory (for example, `rg javascript:` to find all files that has the string "javascript:" in them)
 
 Third, I really cannot work without [powerlevel10](https://github.com/romkatv/powerlevel10k) (or [oh-my-zsh](https://ohmyz.sh/), but that’s more like a framework instead of a theme. I still use it in my Termux, since my [config files for Linux](https://matan-h.com/my-linux-config-files) also use it), [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugins, so let’s install them:  
 Install zsh using `pkg install zsh`, and then use `chsh -s zsh` to make it the default, then clone the plugins
 
-```
-<pre class="wp-block-code">```bash
+```bash
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
 ```
-```
 
 Then edit ~/.zshrc (the zsh config file) using micro: `micro ~/.zshrc` then write:
 
-```
-<pre class="wp-block-code">```bash
+```bash
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)" 
-```
 ```
 
 Hit `ctrl+s` to save, then `ctrl+q` to quit micro.
@@ -85,7 +79,11 @@ Write the command `exec zsh` (which reload the shell). [Powerlevel10k Configurat
 
 After this, you are done setting up Termux (although I would recommend you add some aliases to your `.zshrc` such as `alias l='ls'` to make the letter `l` do the same as `ls`)
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![](/assets/images/termux_p10k_open_with_tools_small-737x1024.png)<figcaption class="wp-element-caption">Screenshot of Termux with `powerlevel10k` theme and using `zoxide`, ⁣`fd` and `rg`</figcaption></figure></div>### Get a file manager for Termux
+![](/assets/images/termux_p10k_open_with_tools_small.png)
+
+<figcaption class="caption-center">Screenshot of Termux with `powerlevel10k` theme and using `zoxide`, ⁣`fd` and `rg`</figcaption>
+
+### Get a file manager for Termux
 
 Unless you want to manage your Termux files using a terminal file manager like [nnn](https://github.com/jarun/nnn), you would probably be more comfortable using a graphic file manager.
 
@@ -97,15 +95,24 @@ Both ways give you access to the Android built-in file manager, that will allow 
 
 [Material files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (the screenshot on the right): install this from the play store, then click the hamburger menu, click `add storage...<font face="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif">,</font>` `External storage`. Click the hamburger menu again and click `Termux` then click `use this folder`.
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-5 is-layout-flex wp-block-gallery-is-layout-flex"><figure class="wp-block-image size-large">![](/assets/images/aosp_pixel_files_on_termux_home-461x1024.png)<figcaption class="wp-element-caption">The built-in `files` app in Android (in Pixel phones)</figcaption></figure><figure class="wp-block-image size-large">![](/assets/images/material_files_on_termux_home_banner-461x1024.png)<figcaption class="wp-element-caption">Material files</figcaption></figure></figure>### **Graphical text editors for full projects**
+![](/assets/images/aosp_pixel_files_on_termux_home.png)
+<figcaption class="caption-center">The built-in `files` app in Android (in Pixel phones)</figcaption>
 
+![](/assets/images/material_files_on_termux_home_banner.png)
+<figcaption class="caption-center">Material files</figcaption>
+
+### **Graphical text editors for full projects**
 If you’re developing something like a React website, using the `micro` editor to edit individual files is simply not enough.  
 For those types of projects I use [Acode](https://www.f-droid.org/packages/com.foxdebug.acode) which is like [vscode](https://code.visualstudio.com) to edit files while viewing the whole project.
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![](/assets/images/acode-_opened_on_transform-461x1024.png)<figcaption class="wp-element-caption">Screenshot of Acode opened on a React website</figcaption></figure></div>### Complete IDE for coding Android on Android
+![](/assets/images/acode-_opened_on_transform.png)
+<figcaption class="caption-center">Screenshot of Acode opened on a React website</figcaption>
+### Complete IDE for coding Android on Android
 
-Setting up Android development using Termux and Acode is very hard (you need to install `openjdk`, install Gradle, install Android SDK, use a template to create new app…) and the sync/compile process is complicated (`gradle build<font face="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif">,</font>` ⁣somehow get Gradle to sync without build, etc.). Fortunately, there is an open source app called [AndroidIDE](https://github.com/AndroidIDEOfficial/AndroidIDE) that does the things Android-studio does: sync Gradle in the background, view files in a convenient way, a run button, and even a built-in Termux (I am not kidding, the app has a full Termux inside).
+Setting up Android development using Termux and Acode is very hard (you need to install `openjdk`, install Gradle, install Android SDK, use a template to create new app…) and the sync/compile process is complicated (`gradle build`,⁣somehow get Gradle to sync without build, etc.). Fortunately, there is an open source app called [AndroidIDE](https://github.com/AndroidIDEOfficial/AndroidIDE) that does the things Android-studio does: sync Gradle in the background, view files in a convenient way, a run button, and even a built-in Termux (I am not kidding, the app has a full Termux inside).
 
 To install it, follow the official [installation](https://androidide.com/docs/installation) docs. This is the only app I have that is not in any app store. And like most of the apps in this blog post, it is open source. However, it is [not on f-droid](https://github.com/AndroidIDEOfficial/AndroidIDE/issues/545), and you have to manually install it from an APK file.
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![](/assets/images/androidide_open_in_appviewer-1-461x1024.png)<figcaption class="wp-element-caption">Screenshot of AndroidIDE opened on a java project called appViewer</figcaption></figure></div>So, next time you’re armed with just your Android and a good idea for a project, remember, turning it into reality is just a few taps away. Happy coding with your pocket dev environment!
+![](/assets/images/androidide_open_in_appviewer.png)
+<figcaption class="caption-center">Screenshot of AndroidIDE opened on a java project called appViewer</figcaption>
+So, next time you’re armed with just your Android and a good idea for a project, remember, turning it into reality is just a few taps away. Happy coding with your pocket dev environment!

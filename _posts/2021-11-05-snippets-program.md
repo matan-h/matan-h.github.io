@@ -21,4 +21,4 @@ Enter your question in [CodeSnippets](https://github.com/matan-h/code-snippets) 
 
 This is for programmers in all languages. The program itself can be installed on Windows only at the moment, Linux and Mac coming soon.
 
-<figure class="wp-block-image size-full">![](/assets/images/code-snippets.png)</figure>
+![](/assets/images/code-snippets.png)

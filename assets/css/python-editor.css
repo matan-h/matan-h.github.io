@@ -1,0 +1,30 @@
+.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top:7px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .output-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .error-message {
+    color: #FF0000;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

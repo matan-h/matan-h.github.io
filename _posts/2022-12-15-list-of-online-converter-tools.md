@@ -13,7 +13,11 @@ tags:
     - shell
 ---
 
-<figure class="wp-block-image size-large">![](/assets/images/ring-of-fire-g94ab22bd2_1920-1024x697.jpg)<figcaption class="wp-element-caption">Image by [Fruity-Paws](https://pixabay.com/users/fruity-paws-1593822) from [Pixabay](https://pixabay.com)</figcaption></figure>Every time I want to convert something, I search for it in google. And every time I found some ad-bloated and slow sites (if they even work), so I make this list of open source and good online converter tools.
+![](/assets/images/ring-of-fire-g94ab22bd2_1920.jpg)
+<figcaption class="caption-center" markdown='block' >Image by [Fruity-Paws](https://pixabay.com/users/fruity-paws-1593822) from [Pixabay](https://pixabay.com)
+</figcaption>
+
+Every time I want to convert something, I search for it in google. And every time I found some ad-bloated and slow sites (if they even work), so I make this list of open source and good online converter tools.
 
 Name of tool link to web demo, GitHub link to GitHub
 
@@ -32,7 +36,7 @@ Name of tool link to web demo, GitHub link to GitHub
 - database 
     - [Quicktype](https://app.quicktype.io/) ([GitHub](https://github.com/quicktype/quicktype)) : convert JSON to struct in a popular programming language
     - Sqlitebiter ([GitHub](https://github.com/thombashi/sqlitebiter)) (offline only) : convert table file to SQL (support Excel, HTML, JSON, CSS, TSV, and a lot more)   
-        (I added it though it has no web online version because it really converts anything to SQL – in the GitHub example : “`sqlitebiter url "<a href="https://en.wikipedia.org/wiki/Comparison_of_firewalls">https://en.wikipedia.org/wiki/Comparison_of_firewalls</a>`” will extract all the tables from the Wikipedia page, then convert them to SQL database)
+        (I added it though it has no web online version because it really converts anything to SQL – in the GitHub example : `sqlitebiter url "https://en.wikipedia.org/wiki/Comparison_of_firewalls"` will extract all the tables from the Wikipedia page, then convert them to SQL database)
 - images 
     - [webp2jpg](https://imagestool.com/webp2jpg-online/) ([GitHub](https://github.com/renzhezhilu/webp2jpg-online)) – Use browser image functionality to converter images formats, resize, rotate, watermark, trim and rename images.
 

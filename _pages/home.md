@@ -1,38 +1,33 @@
 ---
-layout: splash
+title: "Splash Page"
+layout: mysplash
 permalink: /
-hidden: true
+date: 2016-03-23T11:48:41-04:00
 header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/mm-home-page-feature.jpg
-  actions:
-    - label: "<i class='fas fa-download'></i> Install now"
-      url: "/docs/quick-start-guide/"
-excerpt: >
-  A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.24.0">Latest release v4.24.0</a></small>
-feature_row:
-  - image_path: /assets/images/mm-customizable-feature.png
-    alt: "customizable"
-    title: "Super customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"
-  - image_path: /assets/images/mm-responsive-feature.png
-    alt: "fully responsive"
-    title: "Responsive layouts"
-    excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"
-  - image_path: /assets/images/mm-free-feature.png
-    alt: "100% free"
-    title: "100% free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
-    url: "/docs/license/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"      
+  image : /assets/images/buymeacoffee3.png
+  image_size: 200px
+#  overlay_color: "#000"
+#  overlay_filter: "0.5"
+#  overlay_image: /assets/images/buymeacoffee3.png
+  # actions:
+  #   - label: "Download"
+  #     url: "https://github.com/mmistakes/minimal-mistakes/"
+  #caption: "Photo credit: [**myself**](https://unsplash.com)"
+excerpt: "Welcome to my site."
+intro: 
+  - excerpt: 'Welcome to my site! I hope you find my tools useful. Any comments are welcome. All tools are free to use with attribution (see individual licenses).'
 ---
 
-{% include feature_row %}
+{% include feature_row id="intro" type="center" %}
+
+<div class="gallery">
+  {% for post in site.posts %}
+  <a class="gallery-item" href="{{ post.url }}" style="background-image: url('{{ post.image|default: '/assets/images/image-alignment-300x200.jpg' }}');{{post.image_custom_style}}">
+  <span class="image-gradient"></span>
+  <div class='card-content'>
+      <h2 class='card-title'>{{ post.title }}</h2>
+       <p class="card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+  </div>
+  </a>
+  {% endfor %}
+</div>
