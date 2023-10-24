@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
+# remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 theme                    : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -18,7 +18,7 @@ name                     : &name "matan-h" # &name is a YAML anchor which can be
 description              : &description "my blog"
 url                      : https://matan-h.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               :
+repository               : # "matan-h/matan-h.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "<img src=/android-chrome-192x192.png style='height: 100px;'></img>" # overrides the website title displayed in the masthead, use " " for no title

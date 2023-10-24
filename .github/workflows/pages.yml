@@ -56,6 +56,9 @@ jobs:
         run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} --profile --trace
         env:
           JEKYLL_ENV: production
+          RECAPTCHA_SITEKEY: ${{ secrets.RECAPTCHA_SITEKEY }}
+          EMAILJS_SITEKEY: ${{ secrets.EMAILJS_SITEKEY }}
+          
 
       - name: Upload artifact
         # This will automatically upload an artifact from the '/_site' directory
