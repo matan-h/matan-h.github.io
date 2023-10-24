@@ -17,8 +17,8 @@ subtitle                 :
 name                     : &name "matan-h" # &name is a YAML anchor which can be *referenced later
 description              : &description "my blog"
 url                      : https://matan-h.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # "matan-h/matan-h.github.io"
+baseurl                  : '' # the subpath of your site, e.g. "/blog"
+repository               : "matan-h/matan-h.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "<img src=/android-chrome-192x192.png style='height: 100px;'></img>" # overrides the website title displayed in the masthead, use " " for no title
@@ -27,7 +27,7 @@ breadcrumbs: true  # disabled by default
 
 words_per_minute         : 200
 comments:
-  provider               : "false" # false (default), "disqus", "discourse", "facebook", "staticman_v2", "staticman", "utterances", "giscus", "custom"
+  provider               : "giscus" # false (default), "disqus", "discourse", "facebook", "staticman_v2", "staticman", "utterances", "giscus", "custom"
   disqus:
     shortname            :
   discourse:
@@ -41,12 +41,16 @@ comments:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    repo_id              : "R_kgDOKjgHQw" # Shown during giscus setup at https://giscus.app
+    category_name        : "Comments" # Full text name of the category
+    category_id          : "DIC_kwDOKjgHQ84CaZ9w" # Shown during giscus setup at https://giscus.app
+    discussion_term      : "og:title" # "pathname" (default), "url", "title", "og:title"
+    reactions_enabled    : '1' # '1' for enabled (default), '0' for disabled
+    input-position       : 'top'
+    theme                : 'https://matan-h.github.io/assets/css/custom_giscus.css' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme" # TODO: custom css
+    # theme                : 'light_tritanopia' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme" # TODO: custom css
+    crossorigin: 'anonymous'
+
 reCaptcha:
   siteKey                : 
   secret                 :
@@ -94,7 +98,6 @@ analytics:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : # "/assets/images/matan-h.jpg"
-  avatar           : #"/assets/images/matan-h.jpg"
   bio              : "Creating *cool* python libraries, interested in *rust* , in cyber*security*, and working with electron"
   location         : # "127.0.0.1"
   links:
@@ -180,7 +183,7 @@ kramdown:
 
 
 # Collections
-collections:
+# collections:
 
 
 # Defaults
