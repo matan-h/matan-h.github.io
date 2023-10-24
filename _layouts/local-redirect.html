@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="noindex">
+        <!-- after three seconds, assume no javascript, and redirect to  -->
+        <meta http-equiv="refresh" content="3;url={{ page.redirect }}"/>
+        <link rel="canonical" href="{{ page.redirect }}"/>
+        <script type="text/javascript">
+                window.location.pathname = "{{ page.redirect }}"
+        </script>
+        <title>Redirecting&hellip;</title>
+    </head>
+    <body>
+        <h1>Redirecting&hellip;</h1>
+    If you are not redirected automatically, follow <a href='{{ page.redirect }}'>this link</a>.
+    </body>
+    </html>
