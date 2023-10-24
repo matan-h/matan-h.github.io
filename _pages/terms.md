@@ -11,19 +11,10 @@ The privacy of my visitors is extremely important. This Privacy Policy outlines 
 
 First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
 
-### Log Files
+When you contact me, I use [google recaptcha](https://policies.google.com/privacy) to prevent spam bots, and [emailjs](https://www.emailjs.com/legal/privacy-policy) to send me an email.
 
-Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
-
-* Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
-
-All of this information is not linked to anything that is personally identifiable.
-
+{% comment %}
+<!-- the original privacy policy of mmistakes.
 ### Cookies and Web Beacons
 
 When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](http://disqus.com) the next time you leave a comment.
@@ -53,4 +44,5 @@ What this means for you:
 * I do not let the compensation I receive influence the content, topics, posts, or opinions expressed on this website.
 * I respect and value my readers too much to write anything other than my own genuine and objective opinions and advice.
 
-Just like this website, my Disclosure Policy is a work in progress. As the revenue streams evolve, so will this page.
+Just like this website, my Disclosure Policy is a work in progress. As the revenue streams evolve, so will this page. -->
+{% endcomment %}

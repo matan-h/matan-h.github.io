@@ -12,4 +12,4 @@ I also like music (especially John Williams and Michael Giacchino) and play the 
 
 You can also check out my [GitHub](https://github.com/matan-h) page and my [StackOverflow](https://stackoverflow.com/users/12269724/matan-h) page.
 
-I would love to hear from you! Contact me through my [Contact](https://matan-h.com/contact/) page or follow me on [mastodon (fosstodon)](https://fosstodon.org/@matan_h).
+I would love to hear from you! Contact me through my [Contact](/contact/) page or follow me on [mastodon (fosstodon)](https://fosstodon.org/@matan_h).

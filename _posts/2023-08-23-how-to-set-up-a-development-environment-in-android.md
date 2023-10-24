@@ -19,6 +19,11 @@ tags:
     - shell
     - termux
     - utility
+gallery:
+    - image_path: /assets/images/aosp_pixel_files_on_termux_home.png
+      title: The built-in `files` app in Android (in Pixel phones)
+    - image_path: /assets/images/material_files_on_termux_home_banner.png
+      title: Material files
 ---
 
 There are a lot of situations where I have only my Android phone and I want to develop something – it can be an Android app, a React website or simple Python script. Here is how to set this up so your Android phone can become a dev environment.
@@ -50,10 +55,10 @@ Here is an explanation for each of the tools:
     When I edit something in Termux, I need a simple and intuitive text editor. I cannot waste keystrokes by using an editor that’s built for a computer keyboard, and uses numbers and symbols a lot. In Android (with most keyboards) the symbols are 2 buttons away, but control is in the Termux keyboard anyway. So I wanted a text editor that has one mode, and uses simple control shortcuts. Micro-editor is exactly that: it uses <kbd>ctrl</kbd>+<kbd>s</kbd> to save, and <kbd>ctrl</kbd>+<kbd>z</kbd> is to undo, etc.
 - [zoxide](https://github.com/ajeetdsouza/zoxide) – smarter cd command. It keeps track of the directories you use the most, so if you type `z  myproject`, it will remember that it is located in the `/sdcard/termux/projects/myproject`, for instance.
 - [fd](https://github.com/sharkdp/fd) – a simpler `find` command, that uses `fd regx` to find all files containing `regx`, and `fd -e html` to find all files with extension `html`
-- [sd](https://github.com/chmln/sd) – (far) better than `sed`. Find and replace regex just by `sd before after`, for example, to replace newlines with commas: `sd '\n' ','` ([here is how to do it with ](https://unix.stackexchange.com/a/114948/448375)`<a href="https://unix.stackexchange.com/a/114948/448375">sed</a>`)
+- [sd](https://github.com/chmln/sd) – (far) better than `sed`. Find and replace regex just by `sd before after`, for example, to replace newlines with commas: `sd '\n' ','` ([here is how to do it with `sed`](https://unix.stackexchange.com/a/114948/448375))
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) – [fast](https://github.com/BurntSushi/ripgrep#quick-examples-comparing-tools) search for regex in all files in a directory (for example, `rg javascript:` to find all files that has the string "javascript:" in them)
 
-Third, I really cannot work without [powerlevel10](https://github.com/romkatv/powerlevel10k) (or [oh-my-zsh](https://ohmyz.sh/), but that’s more like a framework instead of a theme. I still use it in my Termux, since my [config files for Linux](https://matan-h.com/my-linux-config-files) also use it), [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugins, so let’s install them:  
+Third, I really cannot work without [powerlevel10](https://github.com/romkatv/powerlevel10k) (or [oh-my-zsh](https://ohmyz.sh/), but that’s more like a framework instead of a theme. I still use it in my Termux, since my [config files for Linux](/my-linux-config-files) also use it), [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugins, so let’s install them:  
 Install zsh using `pkg install zsh`, and then use `chsh -s zsh` to make it the default, then clone the plugins
 
 ```bash
@@ -79,9 +84,11 @@ Write the command `exec zsh` (which reload the shell). [Powerlevel10k Configurat
 
 After this, you are done setting up Termux (although I would recommend you add some aliases to your `.zshrc` such as `alias l='ls'` to make the letter `l` do the same as `ls`)
 
-![](/assets/images/termux_p10k_open_with_tools_small.png)
+![](/assets/images/termux_p10k_open_with_tools_small.png){: width="361" height="501" .centered }
 
-<figcaption class="caption-center">Screenshot of Termux with `powerlevel10k` theme and using `zoxide`, ⁣`fd` and `rg`</figcaption>
+<figcaption class="caption-center" markdown="block">
+Screenshot of Termux with `powerlevel10k` theme and using `zoxide`, ⁣`fd` and `rg`
+</figcaption>
 
 ### Get a file manager for Termux
 
@@ -93,19 +100,22 @@ There are only two file managers I know that can edit Termux files: the built-in
 
 Both ways give you access to the Android built-in file manager, that will allow you not just to manage your Termux files, but also to manage `android/data` folder which you can’t access with material files.
 
-[Material files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (the screenshot on the right): install this from the play store, then click the hamburger menu, click `add storage...<font face="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif">,</font>` `External storage`. Click the hamburger menu again and click `Termux` then click `use this folder`.
+[Material files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (the screenshot on the right): install this from the play store, then click the hamburger menu, click `add storage...`, `External storage`. Click the hamburger menu again and click `Termux` then click `use this folder`.
 
-![](/assets/images/aosp_pixel_files_on_termux_home.png)
+<!-- ![](/assets/images/aosp_pixel_files_on_termux_home.png)
 <figcaption class="caption-center">The built-in `files` app in Android (in Pixel phones)</figcaption>
 
 ![](/assets/images/material_files_on_termux_home_banner.png)
-<figcaption class="caption-center">Material files</figcaption>
+<figcaption class="caption-center">Material files</figcaption> -->
+
+{% include gallery caption="on the left,The built-in files app in Android (in Pixel phones). on the right,Material files " %}
+
 
 ### **Graphical text editors for full projects**
 If you’re developing something like a React website, using the `micro` editor to edit individual files is simply not enough.  
 For those types of projects I use [Acode](https://www.f-droid.org/packages/com.foxdebug.acode) which is like [vscode](https://code.visualstudio.com) to edit files while viewing the whole project.
 
-![](/assets/images/acode-_opened_on_transform.png)
+![](/assets/images/acode-_opened_on_transform.png){: .centered.phone-screenshot }
 <figcaption class="caption-center">Screenshot of Acode opened on a React website</figcaption>
 ### Complete IDE for coding Android on Android
 
@@ -113,6 +123,6 @@ Setting up Android development using Termux and Acode is very hard (you need to 
 
 To install it, follow the official [installation](https://androidide.com/docs/installation) docs. This is the only app I have that is not in any app store. And like most of the apps in this blog post, it is open source. However, it is [not on f-droid](https://github.com/AndroidIDEOfficial/AndroidIDE/issues/545), and you have to manually install it from an APK file.
 
-![](/assets/images/androidide_open_in_appviewer.png)
+![](/assets/images/androidide_open_in_appviewer.png){: .centered.phone-screenshot }
 <figcaption class="caption-center">Screenshot of AndroidIDE opened on a java project called appViewer</figcaption>
 So, next time you’re armed with just your Android and a good idea for a project, remember, turning it into reality is just a few taps away. Happy coding with your pocket dev environment!

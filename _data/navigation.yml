@@ -20,8 +20,8 @@ foo:
 
 # main links
 main:
-  #- title: "$HOME"
-  #  url: /
+#  - title: "$HOME"
+#    url: /
   - title: "Python Editor"
     url: /python-editor/
   - title: "Contact"

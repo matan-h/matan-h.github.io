@@ -20,7 +20,7 @@ tags:
 Sometimes I have to use Windows instead of my Linux. Windows is very similar to Linux, but there are some things Linux does far better then Windows. One of them is the Shell. This is the Windows cmd prompt:
 
 ![](/assets/images/cmd-clear-raw.png)
-<figcaption class='caption-center'>windows cmd</figcaption>Compare this to my Linux shell (as I setup it in [my .config](https://matan-h.com/my-linux-config-files/) – [oh-my-zsh](https://ohmyz.sh) ,[syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and [more](https://github.com/matan-h/.config)):
+<figcaption class='caption-center'>windows cmd</figcaption>Compare this to my Linux shell (as I setup it in [my .config](/my-linux-config-files/) – [oh-my-zsh](https://ohmyz.sh) ,[syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and [more](https://github.com/matan-h/.config)):
 
 ![](/assets/images/screenshot-zsh.png)
 <figcaption class='caption-center'>linux zsh</figcaption>So, first I try to use [git-bash](https://gitforwindows.org/) as it similar to the Linux [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), but while I was able to use more than half of my [aliases](https://github.com/matan-h/.config/blob/master/.aliases) with only some find/replace, I was not able to change the shell look and feel, and I needed to use cmd a lot (which i don’t like very much).
