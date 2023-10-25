@@ -222,6 +222,7 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-webp (1.0.0)
     jemoji (0.12.0)
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
@@ -305,6 +306,7 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-paginate
   jekyll-sitemap
+  jekyll-webp (~> 1.0)
   jemoji
   kramdown-parser-gfm (~> 1.1)
   minimal-mistakes-jekyll (~> 4.24)
