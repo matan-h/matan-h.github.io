@@ -19,6 +19,7 @@ tags:
     - shell
     - termux
     - utility
+excerpt: 'Did you know you can develop on your Android just like a computer?'
 gallery:
     - image_path: /assets/images/aosp_pixel_files_on_termux_home.png
       title: The built-in `files` app in Android (in Pixel phones)

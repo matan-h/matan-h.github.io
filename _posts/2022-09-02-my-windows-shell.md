@@ -6,6 +6,7 @@ author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=229'
 permalink: /my-windows-shell/
 image: /assets/images/prompt.jpg
+excerpt: 'How to improve the Windows PowerShell experience'
 categories:
     - dev-tools
 tags:

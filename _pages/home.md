@@ -1,21 +1,14 @@
 ---
-title: "Programming Site"
+title: Programming Site
 layout: mysplash
 permalink: /
-date: 2016-03-23T11:48:41-04:00
+date: 2023-10-25T10:14:48.572Z
 header:
-  image : /assets/images/buymeacoffee3.png
+  image: /assets/images/buymeacoffee3.png
   image_size: 200px
-#  overlay_color: "#000"
-#  overlay_filter: "0.5"
-#  overlay_image: /assets/images/buymeacoffee3.png
-  # actions:
-  #   - label: "Download"
-  #     url: "https://github.com/mmistakes/minimal-mistakes/"
-  #caption: "Photo credit: [**myself**](https://unsplash.com)"
-excerpt: "Welcome to my site."
-intro: 
-  - excerpt: 'Welcome to my site! I hope you find my tools useful. Any comments are welcome. All tools are free to use with attribution (see individual licenses).'
+excerpt: Welcome to my site.
+intro:
+  - excerpt: Welcome to my site! I hope you find my tools useful. Any comments are welcome. All tools are free to use with attribution (see individual licenses).
 ---
 
 {% include feature_row id="intro" type="center" %}

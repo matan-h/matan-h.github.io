@@ -6,6 +6,7 @@ author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=220'
 permalink: /my-linux-config-files/
 image: /assets/images/my-config-files.png
+excerpt: "Here's my Linux Configuration"
 categories:
     - linux
 tags:

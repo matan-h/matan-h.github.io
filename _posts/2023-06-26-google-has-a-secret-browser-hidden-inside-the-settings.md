@@ -1,6 +1,8 @@
 ---
 id: 263
 title: 'Google has a secret browser hidden inside the settings'
+excerpt: 'My most popular article about Google - breakthrough in gms'
+
 date: '2023-06-26T11:09:31+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=263'

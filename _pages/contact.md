@@ -4,6 +4,7 @@ title: Contact
 author: matan.honig2@gmail.com
 permalink: /contact/
 guid: "https://matan-h.com/?page_id=139"
+excerpt: 'Contact me'
 ---
 
 I’d be happy to here from you on any subject! Fill in the form and I’ll get back to you shortly.

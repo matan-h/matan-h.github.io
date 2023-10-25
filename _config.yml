@@ -16,7 +16,8 @@ title_separator          : "-"
 subtitle                 : 
 name                     : &name "matan-h" # &name is a YAML anchor which can be *referenced later
 description              : &description "my blog"
-url                      : https://matan-h.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+#url                      : https://matan-h.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://matan-h.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : '' # the subpath of your site, e.g. "/blog"
 repository               : "matan-h/matan-h.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -47,9 +48,14 @@ comments:
     discussion_term      : "og:title" # "pathname" (default), "url", "title", "og:title"
     reactions_enabled    : '1' # '1' for enabled (default), '0' for disabled
     input-position       : 'top'
-    theme                : 'https://matan-h.github.io/assets/css/custom_giscus.css' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme" # TODO: custom css
-    # theme                : 'light_tritanopia' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme" # TODO: custom css
+    # theme                : 'https://matan-h.github.io/assets/css/custom_giscus.css' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme" # TODO: custom css
+    theme                : 'light_tritanopia' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme" # TODO: custom css
     crossorigin: 'anonymous'
+    emit_metadata         : '1'
+    strict               : # 1 for enabled, 0 for disabled (default)
+    input_position       : 'top' # "top", "bottom" # The comment input box will be placed above or below the comments
+    lang                 : # "en" (default)
+    lazy                 : true # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
 
 reCaptcha:
   siteKey                : 
@@ -206,6 +212,11 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # assets
+  # - scope:
+  #      path: "assets/*"
+  #   values:
+  #     sitemap: false
 
 # Sass/SCSS
 sass:

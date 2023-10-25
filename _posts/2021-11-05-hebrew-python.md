@@ -7,6 +7,7 @@ author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=129'
 permalink: /hebrew-python/
 image: /assets/images/Screenshot-from-2021-11-05-11-07-30.png
+excerpt: 'A library for writing Python programs in Hebrew.'
 categories:
     - dev-tools
 tags:

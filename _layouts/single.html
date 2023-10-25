@@ -58,7 +58,25 @@ layout: default
     </div>
 
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
-      {% include comments.html %}
+    {% include comments.html %}
+      <script>
+        // Display a link to the discussion to comment directly.
+        function updateLink(url){
+          document.getElementById("comment-span").hidden = false
+          document.getElementById("comment-link").href = url
+        }
+        function handleMessage(event) {
+          if (event.origin !== 'https://giscus.app') return;
+          if (!(typeof event.data === 'object' && event.data.giscus)) return;
+          
+          const giscusData = event.data.giscus;
+          if (!('discussion' in giscusData)){return}
+          if (!('url' in giscusData.discussion)){return}
+          updateLink(giscusData.discussion.url)
+          window.removeEventListener('message', handleMessage)
+        }
+window.addEventListener('message', handleMessage);
+      </script>
     {% endif %}
   </article>
 

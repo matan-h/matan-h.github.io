@@ -6,7 +6,7 @@ author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=147'
 permalink: /snippets-program/
 layout: single
-
+excerpt: 'code-snippets is python program for search instant coding answers and save it for later use.'
 image: /assets/images/code-snippets.png
 categories:
     - dev-program

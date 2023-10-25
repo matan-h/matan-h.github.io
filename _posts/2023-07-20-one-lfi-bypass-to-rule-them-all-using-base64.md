@@ -6,6 +6,7 @@ author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=299'
 permalink: /one-lfi-bypass-to-rule-them-all-using-base64/
 image: /assets/images/PHP-filter-etc-passwd-example-com.png
+excerpt: 'bypass most PHP filters using only base64'
 categories:
     - cyber
 tags:

@@ -3,6 +3,7 @@ title: "Random page"
 sitemap: true
 permalink: /random
 layout: full-raw
+excerpt: 'page.goto(random.choise(posts)))'
 ---
 <script>
 const posts = [

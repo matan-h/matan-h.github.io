@@ -5,6 +5,7 @@ permalink: /about/
 date: '2021-11-05T09:44:22+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?page_id=144'
+excerpt: 'About the programmer who committed the worst errors (my.self)'
 ---
 I started programming in MIT-Scratch at age 11. I programmed a bit in Processing and then I discovered Python and created a number of libraries and programs in Python. Later I heard about rust, and I tried simple (or exciting and complicated) projects to learn it. Lately I am also programming in JavaScript in Electron for cross platform desktop development. I also like cybersecurity – I play CTF about once a month.
 

@@ -1,2 +1,4 @@
-breadcrumb_home_label: "~"
-breadcrumb_separator  : "/"
+en-US:
+  breadcrumb_home_label: "~"
+  breadcrumb_separator  : "/"
+  comments_label: "Comments: <span id='comment-span' hidden style='text-transform: none;'> (You can also Comment directly to <a id='comment-link'>this discussions</a> )"
