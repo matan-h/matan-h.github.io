@@ -22,7 +22,7 @@ baseurl                  : '' # the subpath of your site, e.g. "/blog"
 repository               : "matan-h/matan-h.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "<img src=/android-chrome-192x192.png style='height: 100px;'></img>" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "<img src=/android-chrome-192x192.png style='height: 100px;' class='site-icon'></img>" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 breadcrumbs: true  # disabled by default
 

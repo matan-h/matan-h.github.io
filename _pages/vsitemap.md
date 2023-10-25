@@ -3,7 +3,7 @@ layout: full-raw
 title: "Visual Sitemap"
 permalink: /vsitemap/
 sitemap: true
-excerpt: "A visual sitemap - yes, this is the one with colors"
+excerpt: "A visual sitemap - yes, the one with colors"
 ---
 
    <head>

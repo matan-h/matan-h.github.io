@@ -94,6 +94,7 @@ darkgreen {color:green}
 lightgreen{color:lightgreen}
 blue{color:blue}
 // simple posts
+
 .small-img{
   height: 200px;
   
@@ -107,6 +108,14 @@ img.phone-screenshot{
   width:246px;
   height:546px
 }
-.giscus-frame{
+.giscus-frame{ // my theme is light mode, so the giscus frame also need to be. 
   color-scheme: light;
+}
+// site icon
+img.site-icon{
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(110%);/* Create a keyframe animation for pulsation */
+  }
 }
