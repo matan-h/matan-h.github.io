@@ -5,7 +5,7 @@ date: '2022-07-12T15:44:34+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=220'
 permalink: /my-linux-config-files/
-image: /assets/images/my-config-files.png
+image: /assets/images/my-config-files.webp
 excerpt: "Here's my Linux Configuration"
 categories:
     - linux
@@ -21,7 +21,7 @@ tags:
     - zshrc
 ---
 
-![](/assets/images/my-config-files.png)
+![](/assets/images/my-config-files.webp)
 I recently switched to Linux, and I spent a lot of time on editing my config files. I hope it will be useful to others. All the files are in my GitHub repository [.config](https://github.com/matan-h/.config). Each command is documented in the comments.
 
 Here are the main features:

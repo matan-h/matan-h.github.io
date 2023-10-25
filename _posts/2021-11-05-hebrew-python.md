@@ -6,7 +6,7 @@ date: '2021-11-05T09:05:28+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=129'
 permalink: /hebrew-python/
-image: /assets/images/Screenshot-from-2021-11-05-11-07-30.png
+image: /assets/images/Screenshot-from-2021-11-05-11-07-30.webp
 excerpt: 'A library for writing Python programs in Hebrew.'
 categories:
     - dev-tools
@@ -16,7 +16,7 @@ tags:
     - python
 ---
 
-!["hello" in hebrew-python](/assets/images/Screenshot-from-2021-11-05-11-07-30.png)
+!["hello" in hebrew-python](/assets/images/Screenshot-from-2021-11-05-11-07-30.webp)
 <figcaption class='caption-center'>"hello" in hebrew-python</figcaption>
 Want to learn python but English is a problem? Introducing [hebrew-python](https://github.com/matan-h/hebrew-python), a library for writing python in Hebrew.
 

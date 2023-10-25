@@ -5,7 +5,7 @@ date: '2023-08-23T16:51:14+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=340'
 permalink: /how-to-set-up-a-development-environment-in-android/
-image: /assets/images/termux_p10k_open_with_tools_small.png
+image: /assets/images/termux_p10k_open_with_tools_small.webp
 categories:
     - dev-tools
     - linux
@@ -21,9 +21,9 @@ tags:
     - utility
 excerpt: 'Did you know you can develop on your Android just like a computer?'
 gallery:
-    - image_path: /assets/images/aosp_pixel_files_on_termux_home.png
+    - image_path: /assets/images/aosp_pixel_files_on_termux_home.webp
       title: The built-in `files` app in Android (in Pixel phones)
-    - image_path: /assets/images/material_files_on_termux_home_banner.png
+    - image_path: /assets/images/material_files_on_termux_home_banner.webp
       title: Material files
 ---
 
@@ -85,7 +85,7 @@ Write the command `exec zsh` (which reload the shell). [Powerlevel10k Configurat
 
 After this, you are done setting up Termux (although I would recommend you add some aliases to your `.zshrc` such as `alias l='ls'` to make the letter `l` do the same as `ls`)
 
-![](/assets/images/termux_p10k_open_with_tools_small.png){: width="361" height="501" .centered }
+![](/assets/images/termux_p10k_open_with_tools_small.webp){: width="361" height="501" .centered }
 
 <figcaption class="caption-center" markdown="block">
 Screenshot of Termux with `powerlevel10k` theme and using `zoxide`, ⁣`fd` and `rg`
@@ -103,12 +103,6 @@ Both ways give you access to the Android built-in file manager, that will allow 
 
 [Material files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (the screenshot on the right): install this from the play store, then click the hamburger menu, click `add storage...`, `External storage`. Click the hamburger menu again and click `Termux` then click `use this folder`.
 
-<!-- ![](/assets/images/aosp_pixel_files_on_termux_home.png)
-<figcaption class="caption-center">The built-in `files` app in Android (in Pixel phones)</figcaption>
-
-![](/assets/images/material_files_on_termux_home_banner.png)
-<figcaption class="caption-center">Material files</figcaption> -->
-
 {% include gallery caption="on the left,The built-in files app in Android (in Pixel phones). on the right,Material files " %}
 
 
@@ -116,7 +110,7 @@ Both ways give you access to the Android built-in file manager, that will allow 
 If you’re developing something like a React website, using the `micro` editor to edit individual files is simply not enough.  
 For those types of projects I use [Acode](https://www.f-droid.org/packages/com.foxdebug.acode) which is like [vscode](https://code.visualstudio.com) to edit files while viewing the whole project.
 
-![](/assets/images/acode-_opened_on_transform.png){: .centered.phone-screenshot }
+![](/assets/images/acode-_opened_on_transform.webp){: .centered.phone-screenshot }
 <figcaption class="caption-center">Screenshot of Acode opened on a React website</figcaption>
 ### Complete IDE for coding Android on Android
 
@@ -124,6 +118,6 @@ Setting up Android development using Termux and Acode is very hard (you need to 
 
 To install it, follow the official [installation](https://androidide.com/docs/installation) docs. This is the only app I have that is not in any app store. And like most of the apps in this blog post, it is open source. However, it is [not on f-droid](https://github.com/AndroidIDEOfficial/AndroidIDE/issues/545), and you have to manually install it from an APK file.
 
-![](/assets/images/androidide_open_in_appviewer.png){: .centered.phone-screenshot }
+![](/assets/images/androidide_open_in_appviewer.webp){: .centered.phone-screenshot }
 <figcaption class="caption-center">Screenshot of AndroidIDE opened on a java project called appViewer</figcaption>
 So, next time you’re armed with just your Android and a good idea for a project, remember, turning it into reality is just a few taps away. Happy coding with your pocket dev environment!

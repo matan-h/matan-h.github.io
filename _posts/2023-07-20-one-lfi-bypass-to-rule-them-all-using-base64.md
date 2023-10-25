@@ -5,7 +5,7 @@ date: '2023-07-20T06:51:37+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=299'
 permalink: /one-lfi-bypass-to-rule-them-all-using-base64/
-image: /assets/images/PHP-filter-etc-passwd-example-com.png
+image: /assets/images/PHP-filter-etc-passwd-example-com.webp
 excerpt: 'bypass most PHP filters using only base64'
 categories:
     - cyber
@@ -26,7 +26,7 @@ Basically, what PHP filter chain does is to collect characters for a Base64 stri
 
 For that, I need a base64 string that’s ending with ".txt". When I asked the Cyber king of misleading information, it gave me this:
 
-![chatgpt answer: "just append .txt to the base64 encoded string"](/assets/images/chatgpt-asked-about-b64-endswith.png)
+![chatgpt answer: "just append .txt to the base64 encoded string"](/assets/images/chatgpt-asked-about-b64-endswith.webp)
 
 <figcaption class="caption-center">ChatGPT, when asked about creating a base64 that ends with ".txt"</figcaption>
 
@@ -103,7 +103,7 @@ If I took a more useful example from [hacktricks](https://book.hacktricks.xyz/we
 
 <green>?cmd=cat%20/etc/passwd&file=<darkgreen>PHP://filter/convert.base64-decode/resource=data://plain/text,<red>PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4</red><blue>+.txt</blue></darkgreen></green>
 
-![](/assets/images/PHP-filter-etc-passwd-example-com.png)
+![](/assets/images/PHP-filter-etc-passwd-example-com.webp)
 <figcaption class="caption-center">Screenshot of the start of /etc/passwd of that site using PHP://base64-decode filter</figcaption>
 I reported this to the owner, and he decided to just block `php://` protocol (all cases).
 
@@ -112,7 +112,7 @@ But the LFI was also open to the data:// protocol. In normal cases, data:// is u
 Apparently, the server only implements the check if the file ends with "<blue>txt</blue>"(without dot). Not with "<red>.</red><blue>txt</blue>" (with dot). That means, I could just take the previous payload, remove the "." and throw this into the `data` protocol and get the second RCE payload (for some reason, I could decode this only using PHP. Python or bash \[using GNU base64\] required me to add an equal sign after the "txt" to complete the padding.):
 <green>?cmd=id&file=<darkgreen>data://text/plain;base64,<red>PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4<blue>+txt</blue></red></darkgreen></green>
 
-![](/assets/images/data-payload-id-example-com.png)
+![](/assets/images/data-payload-id-example-com.webp)
 <figcaption class="caption-center">Screenshot of the output of the command "id" of that site using the `data://` protocol</figcaption>
 I didn’t find this trick on Google. So I posted it here. I hope that this post informed you
 

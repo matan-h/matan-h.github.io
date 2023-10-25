@@ -7,7 +7,7 @@ date: '2023-06-26T11:09:31+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=263'
 permalink: /google-has-a-secret-browser-hidden-inside-the-settings/
-image: /assets/images/liveoverflow-in-settings.png
+image: /assets/images/liveoverflow-in-settings.webp
 categories:
     - cyber
 tags:
@@ -20,14 +20,14 @@ tags:
 ## <span style="text-decoration: underline;">Important Update:</span> **google reopen my report**
 Today, 3 days after I posted this blog, and it got extensive media coverage (mainly in [English](https://winaero.com/a-secret-hidden-browser-in-android-allows-bypassing-parental-controls/) and in the [mainstream](https://hi-tech.mail.ru/news/101108-na-vashem-android-pryachetsya-sekretnyij-brauzer-kak-ego-zapustit/) [Russian](https://club.dns-shop.ru/digest/98942-polzovatel-matan-h-obnarujil-sekretnyii-brauzer-google-dlya-andr/) [news](https://trashbox.ru/link/2023-06-27-google-sekretnyj-brauzer-na-android)), Google announced that they will reconsider my report
 
-![a](/assets/images/google-update-sized-1024x288.png)
+![a](/assets/images/google-update-sized-1024x288.webp)
 
 <figcaption class="caption-center">Google message about reopening my report</figcaption>
 
 <hr>
 I recently discovered a secret browser located inside the "Manage my account" popup that Android has in various apps (quite important apps, such as Settings, and all Google suite apps). The browser even bypasses parental control!
 
-![My site open inside Settings app in my Android phone](/assets/images/settings-open-in-matan-h-com-3.png)
+![My site open inside Settings app in my Android phone](/assets/images/settings-open-in-matan-h-com-3.webp)
 
 ## How to get there?
 
@@ -43,7 +43,7 @@ Getting there…. takes some work:
 7. Logout from your Google account.  
 8. You got the secret browser ! You can go anywhere. You can also play YouTube videos (with ads, unfortunately), and all of this is in the settings app (or whatever app you choose) !
 
-![](/assets/images/liveoverflow-in-settings.png)
+![](/assets/images/liveoverflow-in-settings.webp)
 <figcaption class="caption-center">LiveOverflow in Settings app</figcaption>
 
 ### Browser overview:
@@ -60,7 +60,7 @@ But there are another things that prevent this browser from being a secure brows
 
 As I was using this browser, I discovered a strange thing. A weird JavaScript object named `mm`. To see this, go to [eruda](https://eruda.liriliri.io/), (just because it’s the best mobile JavaScript console I know) and type `mm`
 
-![Screenshot of eruda expend the `mm` object](/assets/images/eruda-mm.png)
+![Screenshot of eruda expend the `mm` object](/assets/images/eruda-mm.webp)
 <figcaption class="caption-center">Screenshot of eruda expend the 'mm' object </figcaption>
 
 As you see, there are three functions:
@@ -71,7 +71,7 @@ Then you have two methods which I don’t know what they do, but they sound scar
 
 I think this is the time to tell you that I already reported this to Google, and they say this is not a security vulnerability (probably because this secret browser is not very popular), and that the parental control bypass is the "Intended Behavior" 🙂
 
-![](/assets/images/google-response-browser.png)
+![](/assets/images/google-response-browser.webp)
 <figcaption class="caption-center">Google’s answer to my report</figcaption>
 
 If you enjoy using it, please let me know in the comments what you did with it.

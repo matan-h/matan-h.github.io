@@ -5,7 +5,7 @@ date: '2022-12-15T17:45:41+00:00'
 author: matan.honig2@gmail.com
 guid: 'https://matan-h.com/?p=245'
 permalink: /list-of-online-converter-tools/
-image: /assets/images/ring-of-fire-g94ab22bd2_1920.jpg
+image: /assets/images/ring-of-fire-g94ab22bd2_1920.webp
 excerpt: 'What you want to convert'
 categories:
     - dev-tools
@@ -14,7 +14,7 @@ tags:
     - shell
 ---
 
-![](/assets/images/ring-of-fire-g94ab22bd2_1920.jpg)
+![](/assets/images/ring-of-fire-g94ab22bd2_1920.webp)
 <figcaption class="caption-center" markdown='block' >Image by [Fruity-Paws](https://pixabay.com/users/fruity-paws-1593822) from [Pixabay](https://pixabay.com)
 </figcaption>
 

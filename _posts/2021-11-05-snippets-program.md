@@ -7,7 +7,7 @@ guid: 'https://matan-h.com/?p=147'
 permalink: /snippets-program/
 layout: single
 excerpt: 'code-snippets is python program for search instant coding answers and save it for later use.'
-image: /assets/images/code-snippets.png
+image: /assets/images/code-snippets.webp
 categories:
     - dev-program
 tags:
@@ -23,4 +23,4 @@ Enter your question in [CodeSnippets](https://github.com/matan-h/code-snippets) 
 
 This is for programmers in all languages. The program itself can be installed on Windows only at the moment, Linux and Mac coming soon.
 
-![](/assets/images/code-snippets.png)
+![](/assets/images/code-snippets.webp)

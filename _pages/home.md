@@ -4,7 +4,7 @@ layout: mysplash
 permalink: /
 date: 2023-10-25T10:14:48.572Z
 header:
-  image: /assets/images/buymeacoffee3.png
+  image: /assets/images/buymeacoffee3.webp
   image_size: 200px
 excerpt: Welcome to my site.
 intro:
@@ -15,7 +15,7 @@ intro:
 
 <div class="gallery">
   {% for post in site.posts %}
-  <a class="gallery-item" href="{{ post.url }}" style="background-image: url('{{ post.image|default: '/assets/images/image-alignment-300x200.jpg' }}');{{post.image_custom_style}}">
+  <a class="gallery-item" href="{{ post.url }}" style="background-image: url('{{ post.image|default: '/assets/images/image-alignment-300x200.webp' }}');{{post.image_custom_style}}">
   <span class="image-gradient"></span>
   <div class='card-content'>
       <h2 class='card-title'>{{ post.title }}</h2>
