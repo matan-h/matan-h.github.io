@@ -4,7 +4,7 @@ layout: default
 {% if page.header.image or page.header.image_size %}
   <!-- {% include page__hero.html %} -->
   <div style="text-align:center;">
-  <img src="{{page.header.image}}"style="height:{{page.header.image_size}};{{page.header.custom_css}}">
+  <img src="{{page.header.image}}"style="height:{{page.header.image_size}};{{page.header.custom_css}}" alt="{{page.header.alt}}">
 </div>
 {% endif %}
 

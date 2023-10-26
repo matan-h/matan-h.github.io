@@ -6,6 +6,7 @@ date: 2023-10-25T10:14:48.572Z
 header:
   image: /assets/images/buymeacoffee3.webp
   image_size: 200px
+  alt: "matan logo"
 excerpt: Welcome to my site.
 intro:
   - excerpt: Welcome to my site! I hope you find my tools useful. Any comments are welcome. All tools are free to use with attribution (see individual licenses).
