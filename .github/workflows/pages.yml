@@ -47,6 +47,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
+      - name: adding react project
+        run : make react
 
       - name: Checking Jekyll configuration
         run: bundle exec jekyll doctor
