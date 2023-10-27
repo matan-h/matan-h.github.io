@@ -16,3 +16,5 @@ vendor/
 .vscode
 frontmatter.json
 .env
+build.zip
+/private-convert
