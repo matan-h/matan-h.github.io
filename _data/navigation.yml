@@ -4,6 +4,8 @@ main:
 #    url: /
   - title: "Python Editor"
     url: /python-editor
+  - title: "Private Convert"
+    url: /private-convert
   - title: "Contact"
     url: /contact
   - title: "About"
