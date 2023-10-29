@@ -1,6 +1,6 @@
 # matan-h.com
 
-this is my blog, written with jekyll and the source of `matan-h.com`
+this is my blog, written with jekyll and the source of [`matan-h.com`](https://matan-h.com)
 
 ![matan-h-com-homepage](assets/images/matan-h-com-homepage.png)
 
