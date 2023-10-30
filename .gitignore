@@ -18,3 +18,5 @@ frontmatter.json
 .env
 build.zip
 /private-convert
+_drafts/*
+/t.html
