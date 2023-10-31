@@ -6,6 +6,9 @@ serve-drafts:
 serve-prod:
 	JEKYLL_ENV=production make serve
 
+build:
+	OCTOKIT_SILENT=true bundle exec jekyll build
+
 clear:
 	rm -rf _site
 react:

@@ -25,4 +25,6 @@ gem "kramdown-parser-gfm", "~> 1.1"
 
 gem "github-pages", "~> 228"
 
-gem "jekyll-webp", "~> 1.0"
+# gem "jekyll-webp", "~> 1.0"
+# gem "jekyll-webp", "~> 1.0", :path => '/home/matan-h/projects/gh/jekyll-webp' # use my fork of jekyll-webp 
+gem "jekyll-webp", "~> 1.0", :git => 'https://github.com/matan-h/jekyll-webp.git' # use my fork of jekyll-webp 

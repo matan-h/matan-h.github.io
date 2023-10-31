@@ -43,6 +43,9 @@ jobs:
           ruby --version
           gem --version
           bundle --version
+      - name: Install cwebp
+        run: |
+          sudo apt-get install webp 
 
       - name: Setup Pages
         id: pages
