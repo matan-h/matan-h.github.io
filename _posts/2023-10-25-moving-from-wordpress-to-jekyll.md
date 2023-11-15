@@ -165,7 +165,7 @@ Well, I lied. **This** is how it would look with the original [mattbrailsford/cs
 ---
 
 And now I really enjoy Jekyll:
-I love the fact I could do transparent text easily in this article.
+I love the fact I could do transparent text easily in this article (did you spot that?).
 I'm using `MarkText` markdown editor right now, so I can copy-paste pictures, and it automatically puts them in my Assets folder.
 
 Do you have a Jekyll blog (or another static site generator) ? 
