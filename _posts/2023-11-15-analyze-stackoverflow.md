@@ -67,7 +67,7 @@ As you can see, a lot of data.
 
 Then, I asked myself, what could an attacker do with this information? Turns out, most of it is useless:
 
-For using most data, you need more information then just the api key. For example, for stripe , you need the customer ID. For grafana, an instance url. For aws, a site url.
+For using most data, you need more information than just the api key. For example, for stripe , you need the customer ID. For grafana, an instance url. For aws, a site url.
 
 And even if you have an api key which goes to a centralized location without need for a "username", most of the data is old. All the JWTs ([JSON Web Tokens](https://jwt.io)) - forget about them, the average life of a JWT is a month.
 
