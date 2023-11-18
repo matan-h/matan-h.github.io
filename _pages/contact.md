@@ -28,7 +28,7 @@ I’d be happy to here from you on any subject! Fill in the form and I’ll get 
     </div>
     <div class="field">
       <label for="message">Message</label>
-      <input type="text" name="message" id="message" required>
+      <textarea type="text" name="message" id="message" required> </textarea> 
     </div>
 
 <div class="field">
