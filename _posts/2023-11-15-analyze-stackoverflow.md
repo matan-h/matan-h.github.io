@@ -31,7 +31,7 @@ So, I downloaded stackOverflow from the [stackexchange archive.org dump](https:/
 
 I tried different "leak detect" tools, most of them crashed or taking too much cpu:
 
-- gitleaks : `fatal error: runtime: out of memory` 
+- gitleaks : `fatal error: runtime: out of memory` (Update: After I posted this article, [@zricethezav](https://github.com/zricethezav) from GitHub made a [gitleaks PR](https://github.com/gitleaks/gitleaks/pull/1292) to fix this, and now (v8.18.1) it does not crash.)
 
 - truffleHog : Actually works (and takes 100% cpu), but giving very poor results (e.g. a simple `%s` is considered a SQL server base64 encoded: `Detector Type: SQLServer,Decoder Type: BASE64,Raw result: %s` ).
 
