@@ -20,13 +20,13 @@ image: /assets/images/private-convert-recording.gif
 
 ![GIF of the /private-convert website](../assets/images/private-convert-recording.gif)
 
-I happens a lot that I need a media converter: for example, to convert mp4 to gif, that I can send on WhatsApp.
+It happens a lot that I need a media converter: for example, to convert mp4 to GIF, that I can send on WhatsApp.
 
-What most people do is just search google for "mp4 to gif online converter" and get a lot of sites that are either full of trackers and keep your data, or force you to create an account.
+What most people do is just search google for "mp4 to GIF online converter" and get a lot of sites that are either full of trackers and keep your data, or force you to create an account.
 
 <img title="" src="../assets/images/adobe-one-last-thing.webp" alt="screenshot of adobe asking for one last thing" width="714" data-align="inline">
 
-But the real problem began after I had a larger mp4, then most converters wouldn't even let me upload, and those who do, have a very long upload time. So I was forced to use `ffmpeg` (FF MPEG command-line program to convert media), which is not a bad program, it's just unintuitive (or has unintuitive defaults) to the level that instead of searching for an online converter I was  searching "ffmpeg command mp4 to gif" (the default is `ffmpeg -i inp.mp4 out.gif`, which just puts each frame of the mp4 inside the gif, so for `3.6 mb` mp4 file I get  `74  mb` GIF ... ).  
+But the real problem began after I had a larger mp4, then most converters wouldn't even let me upload, and those who do, have a very long upload time. So I was forced to use `ffmpeg` (FF MPEG command-line program to convert media), which is not a bad program, it's just unintuitive (or has unintuitive defaults) to the level that instead of searching for an online converter I was searching "FFmpeg command mp4 to GIF" (the default is `ffmpeg -i inp.mp4 out.gif`, which just puts each frame of the mp4 inside the GIF, so for `3.6 mb` mp4 file I get `74  mb` GIF ...)  
 
 So I built my own online converter.
 
@@ -36,11 +36,11 @@ So I built my own online converter.
 
 There are two approaches for conversion websites:
 
-1. The client upload the files to the server , it runs ffmpeg on each of them in a safe and orderly manner, and returns the output.
+1. The client upload the files to the server, it runs FFmpeg on each of them in a safe and orderly manner, and returns the output.
 
-2. The client uploads the files to the `javascript` in the the website, and the javascript converts the files locally in the browser of the client. In this case, the server is used just to serve the html and javascript file (`serverless`).
+2. The client uploads the files to the `javascript` on the website, and the JavaScript converts the files locally in the browser of the client. In this case, the server is used just to serve the HTML and JavaScript file (`serverless`).
 
-In most cases of conversion, the first approach is the only approach that is possible, and this the approach you see in google results. 
+In most cases of conversion, the first approach is the only approach that is possible, and this is the approach you see in google results. 
 
 | server (1)                                                                                                       | serverless (2)                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -48,26 +48,26 @@ In most cases of conversion, the first approach is the only approach that is pos
 | has upload-time                                                                                                  | doesn't have upload time, but longer processing time.                                              |
 | has a hard size limit                                                                                            | there is no limit, and the maximum size is set by the client computer                              |
 | needs a lot of work to secure the server (for example, it may be easy to DOS, using a lot of maximum size files) | no worries about server security and no rate limiting or maximum number of files a user can upload |
-| its really hard to become private.                                                                               | fully private - there is no server with your sensitive files.                                      |
+| It's really hard to become private.                                                                               | fully private - there is no server with your sensitive files.                                      |
 | Expensive (Processing power)                                                                                     | cheap/free (it's just an HTML file)                                                                |
 
-Since I moved recently [from wordpress to jekyll](https://matan-h.com/moving-from-wordpress-to-jekyll) (from full server to serverless), as you can guess, I choose the `serverless` approach.
+Since I moved recently [from WordPress to jekyll](https://matan-h.com/moving-from-wordpress-to-jekyll) (from full server to serverless), as you can guess, I choose the `serverless` approach.
 
-### ffmpeg
+### FFmpeg
 
 There is something special regarding media conversion sites: most of them use the same open source tool, just with different frontend and options. This awesome tool is called [`FFmpeg`](https://ffmpeg.org/) (or `Fast Forward  Moving Picture Experts Group`), and it's written in c.
 
-But there is one problem. how to run this serverless? you can't just run c code on a browser and expect it to work. But with  [WebAssembly](https://webassembly.org), it's possible. Still, the ffmpeg code is not really WAsm-compatible.
+But there is one problem. How to run this serverless? You can't just run c code on a browser and expect it to work. But with [WebAssembly](https://webassembly.org), it's possible. Still, the FFmpeg code is not really WAsm-compatible.
 
-But someone ported FFmpeg (using Emscripten) to WebAssembly, and created the awesome [`ffmpeg.wasm`](https://ffmpegwasm.netlify.app) and even created a javascript/typescript interface for it.
+But someone ported FFmpeg (using Emscripten) to WebAssembly, and created the awesome [`ffmpeg.wasm`](https://ffmpegwasm.netlify.app) and even created a JavaScript/typescript interface for it.
 
-So, after we know how FFmpeg can run in the client browser, lets get started.
+So, after we know how FFmpeg can run in the client browser, let's get started.
 
 ## start the project
 
 **spoiler**: the converter is online at this site at [`/private-convert`](https://matan-h.com/private-convert)
 
-lets start the project. I want to leverage the typescript interface that `ffmpeg.wasm` has, so I use `create-react-app` from [facebook](https://github.com/facebook/create-react-app):
+Let's start the project. I want to leverage the typescript interface that `ffmpeg.wasm` has, so I use `create-react-app` from [Facebook](https://github.com/facebook/create-react-app):
 
 ```bash
 yarn create react-app my-converter --template typescript
@@ -126,13 +126,13 @@ The code defines 4 states the site can be on:
 
 3. processing (`converting`) - a ProgressBar while the file is being processed
 
-4. download (`converted`) -   where the the user can download the converted files.
+4. download (`converted`) - where the user can download the converted files.
 
-Great. Now we have an interface and we can continue to the interesting part : the conversion.
+Great. Now we have an interface, and we can continue to the interesting part : the conversion.
 
 ## The Conversion
 
-There are two versions of `ffmpeg.wasm`, the multi-thread (called `@ffmpeg/core-mt`) and the single-threaded (called `@ffmpeg/core`). Sometimes chromium-based browsers do [not support multi-thread](https://github.com/ffmpegwasm/ffmpeg.wasm/issues/530). The single-threaded works on all browsers, but it's much slower compared to the multi-threaded version. So let's load the multi-threaded version only on Firefox. Here is the load function: (this file is also [here](https://github.com/matan-h/private-convert/blob/bc5d2e5a0c05b8ce48e28eec5f20608c43a69555/src/utils/FFmpegCls.tsx))
+There are two versions of `ffmpeg.wasm`, the multi-thread (called `@ffmpeg/core-mt`) and the single-threaded (called `@ffmpeg/core`). Sometimes Chromium-based browsers do [not support multi-thread](https://github.com/ffmpegwasm/ffmpeg.wasm/issues/530). The single-threaded works on all browsers, but it's much slower compared to the multithreaded version. So let's load the multithreaded version only on Firefox. Here is the load function: (this file is also [here](https://github.com/matan-h/private-convert/blob/bc5d2e5a0c05b8ce48e28eec5f20608c43a69555/src/utils/FFmpegCls.tsx))
 
 ```typescript
 import { FFmpeg as FFmpegCore } from "@ffmpeg/ffmpeg";
@@ -163,9 +163,9 @@ class ffmpegCls {
   }
 ```
 
-which loads the correct WAsm version based on the browser.
+Which loads the correct WAsm version based on the browser.
 
-Let's also define a function to run the ffmpeg command:
+Let's also define a function to run the FFmpeg command:
 
 ```typescript
   async exec(inputFileName: string, OutputMimeType: string, inputBlob: string, outputFile: string, args: string[]): Promise<File> {
@@ -181,7 +181,7 @@ Let's also define a function to run the ffmpeg command:
   }  
 ```
 
-Good . Now we have class to load ffmpeg, and a function that runs commands on an input file and gets an output file. But the `exec` function we defined takes some parameters we don't know:
+Good. Now we have class to load FFmpeg, and a function that runs commands on an input file and gets an output file. But the `exec` function we defined takes some parameters we don't know:
 
 1. `inputFIleName,inputBlob, OutputFile` - we know. The input is what the user supplied and the output just replaces the extension. 
 
@@ -189,7 +189,7 @@ Good . Now we have class to load ffmpeg, and a function that runs commands on an
 
 3. `args` - we need a map `{conversion_type: args}`
 
-OutputMimeType is necessary so that the browser knows how to save and display it, and args is necessary to change the default behavior of ffmpeg because otherwise we will have things like `74 mb` GIF from `3.6 mb` MP4.
+`OutputMimeType` is necessary so that the browser knows how to save and display it, and `args` is necessary to change the default behavior of FFmpeg because otherwise we will have things like `74 mb` GIF from `3.6 mb` MP4.
 
 ## The map
 
@@ -204,7 +204,7 @@ export interface ConvertOption {
 }
 ```
 
-then, we can define the "standard/normal ffmpeg args" for *most* video formats:
+then, we can define the "standard/normal FFmpeg args" for *most* video formats:
 
 ```typescript
 interface ConvertRoutes {
@@ -217,7 +217,7 @@ const normalVideoRoutes_video: ConvertRoutes = {
 };
 ```
 
-and finally write the map (you can look on the full map at [this file](https://github.com/matan-h/private-convert/blob/main/src/utils/convertOptionsFull.ts):
+and finally write the map (you can look on the full map at [this file](https://github.com/matan-h/private-convert/blob/main/src/utils/convertOptionsFull.ts)):
 
 ```typescript
 interface ConvertOptionsType {
@@ -241,6 +241,6 @@ export const ConvertOptions: ConvertOptionsType = {
   },
 ```
 
-I added some more features (for example, multi-files, ffmpeg logs). You can look at the [final App.tsx on my GitHub]( https://github.com/matan-h/private-convert/blob/main/src/App.ts), or just enjoy it right now: online at [`/private-convert`](https://matan-h.com/private-convert)
+I added some more features (for example, multi-files, FFmpeg logs). You can look at the [final App.tsx on my GitHub]( https://github.com/matan-h/private-convert/blob/main/src/App.ts), or just enjoy it right now: online at [`/private-convert`](https://matan-h.com/private-convert)
 
 I hope you enjoy it and if you have any Idea how to make it better, let me know in the comment section, or just with issue or pull request to the `private-convert` [GitHub Repo](https://github.com/matan-h/private-convert).
