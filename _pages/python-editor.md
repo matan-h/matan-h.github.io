@@ -2,26 +2,27 @@
 title: Python Editor
 excerpt: Python editor.
 permalink: /python-editor
-description: run pyton online using only your browser
+description: run python online using only your browser
 ---
 <head>
-  <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/editor/editor.main.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/python-editor.css">
 
-  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs/editor/editor.main.min.css">
   <script>
     var require = {
         paths: {
-            'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs'
+            'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs'
         }
     }
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/loader.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/editor/editor.main.nls.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/editor/editor.main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs/loader.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs/editor/editor.main.nls.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs/editor/editor.main.js" defer></script>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/basic-languages/python/python.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs/basic-languages/python/python.js" defer></script>
   
 </head>
 
@@ -33,11 +34,12 @@ To tryout Hebrew python online, click [here](/python-editor?hebrew_mode=1&code=%
 <body>
 
 <div id="code-editor-div">
-  <div id="container" style="height: 400px; border: 1px solid black;"></div>
+  <div id="editor" ></div>
   <p><button id="run" class="button">Run</button></p>
   <div>Output:</div>
   <p> <textarea id="output" class="output-textarea" rows="6" disabled></textarea></p>
   <div id="code-error" class="error-message"></div>
+  <div id="loading-indicator">Loading ...</div>
 </div>
 <script src="/assets/js/python-editor.js" defer></script>
 </body>

@@ -27,4 +27,14 @@
     font-weight: bold;
     margin-top: 10px;
   }
-  
+  #editor{
+
+    height: 400px; border: 1px solid black;
+  }
+
+  label {
+    display:block;
+    margin-bottom:0.25em;
+    color:unset !important;
+    cursor:pointer
+  }

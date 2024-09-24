@@ -10,7 +10,7 @@ build:
 	OCTOKIT_SILENT=true bundle exec jekyll build
 
 clear:
-	rm -rf _site
+	rm -rf _site .sass-cache
 react:
 	rm -rf private-convert build.zip
 	mkdir private-convert
@@ -19,3 +19,5 @@ react:
 	mv private-convert/build/* private-convert
 	rmdir private-convert/build
 	rm build.zip
+install:
+	bundle install

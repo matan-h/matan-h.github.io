@@ -1,4 +1,3 @@
-
 // Define global variables
 const pyodideReadyPromise = load_pyodide();
 const output = document.getElementById("output");
@@ -11,7 +10,7 @@ let runCode = null;
 // Initialize Pyodide
 async function load_pyodide() {
   const pyodide = await loadPyodide({
-    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.24.1/full/",
+    // indexURL: "https://cdn.jsdelivr.net/pyodide/v0.62.2/full/",
     stdin: window.prompt,
     stdout: addTextToOutput,
     stderr: addTextToOutput,
@@ -55,7 +54,7 @@ async function run(code) {
   const hebrewMode = params.has("hebrew_mode") ? params.get("hebrew_mode") : false;
 
   // Get Pyodide
-  const pyodide = await pyodideReadyPromise;
+  // const pyodide = await pyodideReadyPromise;
 
   try {
     // Run the Python code
@@ -79,12 +78,16 @@ const codeString = params.get("code");
 
 // Initialize the code editor
 function main() {
-  const editor = monaco.editor.create(document.getElementById("container"), {
-    value: codeString || "def main():\n\tprint('Hello world!')\nmain()",
-    language: "python",
-    theme: "vs-dark",
-    readOnly: false,
-  });
+  
+    const editor = monaco.editor.create(document.getElementById('editor'), {
+      value: codeString || "def main():\n\tprint('Hello world!')\nmain()",
+      language: 'python',
+      automaticLayout: true,
+      padding: { top: 5, right: 5, bottom: 5, left: 5 },
+      overviewRulerLanes: 0,
+      overviewRulerBorder: false,
+      theme: 'vs-dark',
+    });
 
   // Add an event listener to the "Run" button
   document.getElementById("run").onclick = () => {
@@ -93,4 +96,4 @@ function main() {
 }
 
 // Start the application
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener("DOMContentLoaded", ()=>require(['vs/editor/editor.main'], main));

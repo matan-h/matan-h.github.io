@@ -16,15 +16,13 @@ group :jekyll_plugins do
   gem 'jekyll-environment-variables'
 end
 
-gem "minimal-mistakes-jekyll", "~> 4.24"
-gem "jekyll", "~> 3.9.5"
+gem "minimal-mistakes-jekyll", "~> 4.26.2"
+gem "jekyll", "~> 3.10.0"
 
 gem "webrick", "~> 1.8"
 
 gem "kramdown-parser-gfm", "~> 1.1"
 
-gem "github-pages", "~> 231"
+gem "github-pages", "~> 232"
 
-# gem "jekyll-webp", "~> 1.0"
-# gem "jekyll-webp", "~> 1.0", :path => '/home/matan-h/projects/gh/jekyll-webp' # use my fork of jekyll-webp 
 gem "jekyll-webp", "~> 1.0", :git => 'https://github.com/matan-h/jekyll-webp.git' # use my fork of jekyll-webp 
