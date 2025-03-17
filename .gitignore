@@ -20,3 +20,5 @@ build.zip
 /private-convert
 _drafts/*
 /t.html
+__pycache__/
+t.py
