@@ -1,7 +1,7 @@
 serve:
-	OCTOKIT_SILENT=true bundle exec jekyll serve
+	OCTOKIT_SILENT=true bundle exec jekyll serve $(ARGS)
 serve-drafts:
-	OCTOKIT_SILENT=true bundle exec jekyll serve --drafts
+	OCTOKIT_SILENT=true bundle exec jekyll serve --drafts $(ARGS)
 
 serve-prod:
 	JEKYLL_ENV=production make serve
