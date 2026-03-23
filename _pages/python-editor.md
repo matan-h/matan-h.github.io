@@ -7,7 +7,7 @@ description: run python online using only your browser
 <head>
   <link rel="stylesheet" type="text/css" href="/assets/css/python-editor.css">
 
-  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script>
 
   <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.51.0/min/vs/editor/editor.main.min.css">
   <script>
@@ -39,7 +39,6 @@ To tryout Hebrew python online, click [here](/python-editor?hebrew_mode=1&code=%
   <div>Output:</div>
   <p> <textarea id="output" class="output-textarea" rows="6" disabled></textarea></p>
   <div id="code-error" class="error-message"></div>
-  <div id="loading-indicator">Loading ...</div>
 </div>
 <script src="/assets/js/python-editor.js" defer></script>
 </body>

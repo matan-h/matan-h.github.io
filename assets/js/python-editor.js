@@ -60,9 +60,10 @@ async function run(code) {
     // Run the Python code
     const outputMap = runCode(code, hebrewMode).toJs();
 
+
     // If there is an error, display it
-    if (outputMap.has("error")) {
-      codeErrorElem.innerHTML = outputMap.get("error");
+    if (outputMap["error"]) {
+      codeErrorElem.innerHTML = outputMap["error"];
     } else {
       // Clear the error message
       codeErrorElem.innerHTML = "";
