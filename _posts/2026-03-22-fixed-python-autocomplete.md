@@ -48,7 +48,7 @@ In [many](https://en.wikipedia.org/wiki/Lexicographic_order) cases,alphabet orde
 
 - [NN/g](https://www.nngroup.com/articles/alphabetical-sorting-must-mostly-die/) - "..,prioritization by importance or frequency are usually better than A-Z listings..,People Rarely Think A–Z"
 
-In programming, you type letter by letter, when you write `sys.a` you are (almost) certainly not thinking about `abiflags` or `activate_stack_trampoline` <offwhite> and if you were thinking about them, you are probably one of the only 10 people in the world who know about them :) </offwhite>
+In programming, you type letter by letter, when you write `sys.a` you are (almost) certainly not thinking about `sys.abiflags` or `sys.activate_stack_trampoline` <offwhite> and if you were thinking about them, you are probably one of the only 10 people in the world who know about them :) </offwhite>
 
 ## Solutions
 
@@ -69,7 +69,7 @@ However, just dumping this table would result in a big and slow file for no reas
 
 ## Hash Score Table format
 
-The first thing that takes up space here is the prefix string. Since the format is designed to be query only, no need to include the actual string. The format uses a fast hash, FNV-1a , shifted to be 24-bit.
+The first thing that takes up space here is the prefix string. Since the format is designed to be query only, no need to include the actual string (instead,it includes just the hash). The format uses a fast hash, FNV-1a , shifted to be 24-bit.
 
 ```yml
 - Header (magic `HSCT`+version) - 8 bytes
