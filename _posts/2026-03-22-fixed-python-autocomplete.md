@@ -95,6 +95,9 @@ I added two new thresholds.
 
 These two thresholds very quickly changed the file size, as you can see in the interactive. Important calls/attr dropped appear below.
 
+## UPDATE:
+Using path filtering and a bit of over elimination (only considering unique paths), I got the project threshold to work better, and so reduce the size of p=3 r=2 by 3/4
+
 <section id="threshold-explorer">
 <style>
 #threshold-explorer {
